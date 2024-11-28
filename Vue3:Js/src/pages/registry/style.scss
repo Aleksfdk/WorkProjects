@@ -1,0 +1,178 @@
+.registry {
+  .table-view tbody {
+    min-height: calc(100vh - 403px);
+    max-height: calc(100vh - 403px);
+  }
+  &-header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+
+    &__modal-content__title {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+      color: #6d7188;
+    }
+
+    &__icon-upload {
+      &:hover {
+        cursor: pointer;
+        transition: 0.3s all;
+        opacity: 0.7;
+      }
+
+
+    }
+
+    &__icon-reports {
+      position: relative;
+      animation: anianimationReports 0.3s ease-in-out;
+      animation-delay: 0.4s;
+      animation-fill-mode: both;
+
+      &:hover {
+        cursor: pointer;
+        transition: 0.3s all;
+        opacity: 0.7;
+      }
+    }
+
+    &__reports-url {
+      padding-left: 16px;
+
+      &-btns {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    &__reports-download {
+      //float: right;
+      color: #5B89FF;
+      padding: 0 16px;
+      &:hover {
+        cursor: pointer;
+        transition: 0.3s all;
+        opacity: 0.7;
+      }
+    }
+
+    &__reports-save {
+      //float: right;
+      color: #5B89FF;
+      padding: 0 16px;
+      margin-top: 0;
+      &:hover {
+        cursor: pointer;
+        transition: 0.3s all;
+        opacity: 0.7;
+      }
+    }
+
+    &__reports-clear {
+      float: right;
+      color: #ec2260;
+      padding: 0 16px;
+      margin-top: 0;
+      &:hover {
+        cursor: pointer;
+        transition: 0.3s all;
+        opacity: 0.7;
+      }
+    }
+
+    @keyframes animationReports {
+      from {
+        bottom: -20px;
+      }
+      to {
+        position: relative;
+        bottom: 0;
+      }
+    }
+
+    &__reports-list {
+      position: absolute;
+      top: 65%;
+      right: 0;
+      padding: 16px;
+      background: #FFFFFF;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 5px 5px 10px rgba(79, 79, 79, 0.05);
+      backdrop-filter: blur(5px);
+      border-radius: 8px;
+      z-index: 9999;
+    }
+  }
+
+  &-tab-panel {
+   display: flex;
+    align-items: center;
+    padding-left: 0;
+    margin-top: 0;
+
+    &__btns {
+      background: #ecf1ff;
+      border-radius: 60px;
+      margin: 0 16px 0 0;
+      color: #3360f4;
+      list-style: none;
+      font-family: Montserrat-Medium, sans-serif;
+      font-size: 14px;
+      line-height: 20px;
+      text-align: center;
+      padding: 8px 12px;
+      transition: 0.3s all;
+      &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+      }
+    }
+
+    &__btns-active {
+      transition: 0.5s all;
+      background: #3360f4 !important;
+      color: #ffffff !important;
+    }
+  }
+
+  &-header__filter {
+    display: flex;
+    align-items: center;
+
+    & p {
+      padding-left: 12px;
+    }
+
+    &-modal__checkboxs {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-modal__checkboxs-block {
+      padding-right: 40px;
+    }
+
+    &-modal:hover {
+      cursor: pointer;
+      transition: 0.3s all;
+      opacity: 0.7;
+    }
+
+    &-actions {
+      display: flex;
+      align-items: center;
+
+      &__btn {
+        margin-right: 20px;
+      }
+
+      &__input {
+        margin-right: 15px;
+      }
+    }
+  }
+}

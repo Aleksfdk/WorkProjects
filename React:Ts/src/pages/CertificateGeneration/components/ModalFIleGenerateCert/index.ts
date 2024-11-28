@@ -1,0 +1,1 @@
+export { ModalFileGenerateCert } from './ModalFileGenerateCert';

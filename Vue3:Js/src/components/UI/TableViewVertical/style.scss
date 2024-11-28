@@ -1,0 +1,151 @@
+.table-view-vertical {
+	height: 100%;
+
+	table,
+	tr td {
+		border-collapse: collapse;
+	}
+
+	// tr.error {
+	// 	margin-bottom: 20px;
+	// }
+
+	tbody {
+		display: block;
+		max-width: calc(100vw - 383px);
+		height: calc(100% - 108px);
+		overflow: auto;
+		border-bottom: 1px solid #f0f0f2;
+	}
+
+	&__body {
+		overflow-y: clip;
+		position: relative;
+	}
+
+	thead,
+	tbody tr {
+		display: table;
+	}
+
+	table {
+		width: 100%;
+		height: 100%;
+	}
+
+	td {
+		vertical-align: middle;
+	}
+
+	th:last-of-type,
+	td:last-of-type {
+		padding-right: 20px;
+	}
+
+	tr:last-of-type {
+		margin-bottom: 20px;
+	}
+
+	td:not(.table-view-vertical__item_title):hover::after { 
+    background-color: #F9FAFE;
+    content: '';  
+    height: 10000px;    
+    left: 0;
+    position: absolute;  
+    top: -5000px;
+    width: 100%;
+    z-index: -1;
+		cursor: pointer;
+		transition: 0.3s all; 
+  }
+
+	.no-data {
+		position: absolute;
+    top: 40%;
+    left: 45vw;
+	}
+
+	&__actions-title {
+		width: 100px;
+		border-bottom: 1px solid #f0f0f2;
+	}
+
+	&__actions-item {
+		& img {
+			position: relative;
+			margin-right: 15px;
+			transition: 0.3s all;
+			z-index: 1;
+
+			&:hover {
+				opacity: 0.7;
+				cursor: pointer;
+			}
+		}
+
+		 & svg:hover {
+			opacity: 0.7;
+			cursor: pointer;
+		}
+	}
+
+	.title-checkbox {
+		padding-left: 0;
+	}
+
+	.checkbox {
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
+
+	.checkbox-group {
+		margin: 0;
+		display: flex;
+		justify-content: center;
+	}
+
+	&__item {
+		padding: 10px;
+		font-family: Montserrat-Regular, sans-serif;
+		font-weight: 400;
+		font-size: 14px;
+		color: #242f4b;
+		position: relative;
+
+		&.editing {
+			padding: 7px 10px;
+			margin-right: 30px;
+		}
+
+		&_title {
+			padding-left: 0;
+			font-family: Montserrat-Medium, sans-serif;
+			font-weight: 500;
+			font-size: 14px;
+			color: #a0a3b6;
+			background-color: #fff;
+			position: sticky;
+			left: 0;
+			z-index: 10;
+		}
+
+		& span {
+			white-space: nowrap;
+		}
+	}
+
+	&__icons {
+		padding-left: 3px;
+		transition: 0.5s all;
+
+		&:hover {
+			transition: 0.3s all;
+			opacity: 0.7;
+			cursor: pointer;
+		}
+	}
+
+	.action-icon_pr {
+		padding-right: 3px;
+	}
+}

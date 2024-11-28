@@ -1,0 +1,73 @@
+.add-animal {
+	height: 100%;
+	&__form {
+		height: calc(100% - 167px);
+		overflow: auto;
+	}
+
+	&__form-list {
+		height: calc(100% - 62px);
+		overflow-y: auto!important;
+	}
+
+	&__form-item {
+		display: flex;
+		margin-bottom: 24px;
+
+		& .input-group, & .select-group {
+			margin-right: 32px;
+		}
+	}
+
+	&__form-item__type {
+		&-radio {
+			margin: 25px 0;
+		}
+
+		&-list {
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		&-title {
+			font-family: Montserrat-Bold, sans-serif;
+			font-size: 24px;
+			line-height: 30px;
+			color: #242f4b;
+		}
+	}
+
+	&__radio-group {
+		display: flex;
+		align-items: center;
+		margin-top: 16px;
+		width: 100%;
+
+		.radio-button {
+			margin-right: 20px;
+		}
+	}
+
+	&__footer {
+		display: flex;
+		align-items: center;
+		border-top: 1px solid #F0F0F2;
+
+		.btn-primary {
+			margin-left: 16px;
+		}
+	}
+
+	.form-col {
+		margin-bottom: 24px;
+		margin-right: 32px;
+		width: 45%;
+		max-width: 462px;
+		min-width: 380px;
+	}
+}

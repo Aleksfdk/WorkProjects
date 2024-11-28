@@ -1,0 +1,74 @@
+@import '../../styles/variables.scss';
+
+:global {
+  html body {
+    .ant-radio {
+      &-wrapper {
+        color: $text;
+        &:hover {
+          .ant-radio:not(.ant-radio-disabled) .ant-radio-inner {
+            border-color: $white;
+          }
+        }
+      }
+
+      &-group-large label {
+        font-size: 16px;
+      }
+      &-inner {
+        border-color: $primary;
+        background-color: transparent;
+      }
+
+      &-input:focus + .ant-radio-inner {
+        border-color: $primary;
+        box-shadow: none;
+      }
+
+      &-checked {
+        .ant-radio-inner {
+          border-color: $primary;
+          &::after {
+            background-color: $primary;
+            transform: scale(0.7);
+          }
+        }
+        &.ant-radio-disabled {
+          .ant-radio-inner {
+            border-color: $text-opacity3;
+            &::after {
+              background-color: $text-opacity3;
+            }
+          }
+        }
+      }
+
+      &-disabled {
+        + span {
+          color: $white-opacity1;
+        }
+
+        .ant-radio-inner {
+          &::after {
+            background: $text-opacity3;
+            transform: scale(0.7);
+          }
+        }
+      }
+      &.ant-radio-disabled .ant-radio-inner {
+        border-color: $text-description;
+      }
+      &.ant-radio.ant-radio-disabled .ant-radio-inner {
+        background: transparent;
+      }
+      &-wrapper-checked:hover {
+        & .ant-radio-checked .ant-radio-inner {
+          background: $white;
+        }
+        & .ant-radio-disabled .ant-radio-inner {
+          background: transparent;
+        }
+      }
+    }
+  }
+}

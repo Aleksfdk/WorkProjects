@@ -1,0 +1,26 @@
+@import '../../styles/variables.scss';
+
+.trace {
+  display: flex;
+  align-items: flex-start;
+  line-height: 20px;
+  font-weight: 500;
+  margin-left: 20px;
+
+  &.hidden {
+    display: none;
+  }
+  &.notCollected {
+    color: $error;
+  }
+  &.collecting {
+    color: $warning;
+  }
+  &.collected {
+    color: $success;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

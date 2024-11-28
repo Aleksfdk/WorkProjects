@@ -1,0 +1,73 @@
+@import "common/styles/variables";
+
+.mainWrapper {
+  :global {
+    .anticon {
+      font-size: 20px;
+    }
+
+    .ant-btn {
+      border: none !important;
+      justify-content: flex-end;
+    }
+
+    .ant-dropdown-menu {
+      text-align: left;
+      background-color: $result-modal-bg !important;
+      min-width: 204px;
+      .icon {
+        transform: rotate(180deg) !important;
+      }
+    }
+
+    .ant-dropdown-placement-bottomRight{
+      .icon {
+        transform: rotate(180deg) !important;
+      }
+    }
+
+    .ant-dropdown-menu-title-content {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      white-space: nowrap;
+
+      .icon {
+        svg {
+          stroke: none;
+        }
+      }
+
+      p {
+        font-family: $main-font !important;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 140%;
+        margin-bottom: 0;
+      }
+    }
+
+    .ant-dropdown-menu-title-content div > p {
+      margin: 0;
+    }
+
+    .ant-dropdown-menu-title-content div p::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: '';
+    }
+
+    .ant-dropdown-menu .ant-dropdown-menu-item:hover:not(.ant-dropdown-menu-item-disabled) {
+      background-color: #7f00ff !important;
+      color: $white !important;
+    }
+
+    .ant-dropdown-menu-item {
+      height: 36px;
+      background: transparent;
+    }
+  }
+}

@@ -1,0 +1,111 @@
+@import '../../styles/variables.scss';
+
+.eventsCard {
+  display: flex;
+  gap: 32px;
+  padding: 32px;
+  background-color: $header-bg;
+  :global {
+    .ant-btn.ant-btn-loading {
+      cursor: not-allowed;
+    }
+  }
+  &:not(.noRedirect) {
+    cursor: pointer;
+  }
+  .col {
+    .description {
+      color: $text;
+      font-size: 16px;
+      font-weight: 500;
+      font-family: $main-font;
+      margin-bottom: 16px;
+    }
+    .divider {
+      border-color: $divider-bg;
+    }
+    .infoWrapper {
+      padding: 20px;
+      background: $card-bg-new;
+      margin-bottom: 24px;
+    }
+    &:first-child {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .btnWrapper {
+      display: flex;
+      column-gap: 24px;
+      .btn {
+        min-width: 152px;
+        height: 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
+        font-weight: 500;
+        border: none;
+        background-color: $primary;
+        font-size: 18px;
+        &.subscribeBtn {
+          border-color: transparent;
+          color: $text;
+          text-transform: inherit;
+          &:hover {
+            background-color: rgba($primary, 0.8);
+          }
+          &:active {
+            background-color: $primary;
+            border-color: transparent;
+            color: $text;
+          }
+        }
+        &.unsubscribeBtn {
+          text-transform: inherit;
+          background-color: transparent;
+          color: $primary;
+          border: 1px solid $primary;
+          padding: 12px 24px;
+          &:hover {
+            background-color: $backdrop-bg;
+          }
+          &:active {
+            background-color: transparent;
+            color: $text;
+          }
+        }
+        &.disable {
+          cursor: not-allowed;
+          background-color: $primary;
+          color: $text;
+          text-transform: inherit;
+        }
+      }
+    }
+    .title {
+      color: $text;
+      font-family: $secondary-font;
+      font-size: 48px;
+      font-weight: 400;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+    }
+    .date {
+      color: $text;
+      margin-right: auto;
+      font-size: 18px;
+      font-weight: 500;
+    }
+    .imgWrapper {
+      width: 368px;
+      max-height: 200px;
+      height: 100%;
+      .img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

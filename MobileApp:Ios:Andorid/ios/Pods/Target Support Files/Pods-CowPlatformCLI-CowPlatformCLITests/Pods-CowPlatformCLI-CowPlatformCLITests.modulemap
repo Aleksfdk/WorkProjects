@@ -1,0 +1,6 @@
+module Pods_CowPlatformCLI_CowPlatformCLITests {
+  umbrella header "Pods-CowPlatformCLI-CowPlatformCLITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

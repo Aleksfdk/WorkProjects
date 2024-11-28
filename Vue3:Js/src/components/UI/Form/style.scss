@@ -1,0 +1,22 @@
+form {
+  height: 100%;
+}
+.form-item {
+  display: flex;
+  align-items: flex-start;
+ & p {
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 20px;
+   color: #6D7188;
+   margin: 0;
+ }
+  & span {
+    color: #6D7188;
+  }
+}
+
+.form-line {
+  display: flex;
+  align-items: center;
+}

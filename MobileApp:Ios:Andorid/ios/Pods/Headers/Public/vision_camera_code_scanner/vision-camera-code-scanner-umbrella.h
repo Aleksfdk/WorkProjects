@@ -1,0 +1,1 @@
+../../../Target Support Files/vision-camera-code-scanner/vision-camera-code-scanner-umbrella.h

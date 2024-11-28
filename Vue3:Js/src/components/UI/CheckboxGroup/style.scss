@@ -1,0 +1,25 @@
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  width: auto;
+
+  &__title {
+    font-size: 14px;
+    line-height: 20px;
+    color: #242F4B;
+    padding-left: 12px;
+    white-space: nowrap;
+    //overflow: hidden;
+    //text-overflow: ellipsis;
+  }
+  input[type='checkbox'] {
+    width: 20px !important;
+    height: 20px !important;
+    transition: 0.3s all;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+  }
+}

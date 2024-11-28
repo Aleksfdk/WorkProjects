@@ -1,0 +1,105 @@
+@import '/src/common/styles/variables';
+
+.modalGeneration {
+
+  .datePicker {
+    width: 433px;
+    height: 44px;
+  }
+
+  .panelBtnEdit {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+
+    & button {
+      display: block;
+      width: 40px;
+      height: 40px;
+      margin-left: 8px;
+      border-color: $input-border-color !important;
+
+      &:hover {
+        border-color: $primary-hover !important;
+      }
+    }
+  }
+
+  table {
+    margin-bottom: 32px;
+
+    th {
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+    }
+  }
+
+  .fileUploadRow {
+    display: flex;
+    align-items: center;
+  }
+
+  .btnUploadFile {
+    border-color: $primary !important;
+    color: $primary !important;
+    height: 40px;
+    margin-left: 22px;
+
+    &:hover {
+      color: $primary-hover !important;
+      border-color: $primary-hover !important;
+    }
+  }
+
+  .previewImg {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .sortCheckboxCol {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+  }
+
+  .sortIconCheckbox {
+    svg {
+      font-size: 20px;
+    }
+  }
+
+  .sortBtn {
+    border: none !important;
+
+    svg path {
+      stroke-opacity: 1;
+    }
+  }
+
+  .active {
+    svg path {
+      stroke: $primary;
+    }
+  }
+
+  .infoPanel {
+    display: flex;
+    align-items: center;
+    background-color: $warning-bg-blue;
+    padding: 18px 22px;
+    margin-bottom: 24px;
+
+    p {
+      margin-bottom: 0;
+      color: white;
+      padding-left: 10px;
+      font-size: 16px;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+      fill: $blue;
+    }
+  }
+}

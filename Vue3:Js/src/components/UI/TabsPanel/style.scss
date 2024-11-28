@@ -1,0 +1,134 @@
+.tabs-panel-wrapper {
+	height: 100%;
+}
+
+.tabs-panel {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	margin: 37px 0 17px;
+	padding-left: 0;
+	padding-bottom: 20px;
+	overflow-y: hidden;
+	flex-wrap: nowrap;
+	position: relative;
+
+	&__title {
+		width: auto;
+		margin: 0;
+		white-space: nowrap;
+	}
+
+	&__second-level {
+		//border-bottom: 5px solid #E8EAF3;
+		margin: 15px 0;
+		padding: 0 0 10px;
+		overflow-x: auto;
+		z-index: 1;
+
+		&::-webkit-scrollbar-track {
+			margin-left: 12px;
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			display: block;
+			width: calc(100% - 16px);
+			height: 5px;
+			top: 34.5px;
+			background-color: #E8EAF3;
+			margin: 0 12px;
+		}
+	}
+}
+
+.tab-item {
+	background: #ecf1ff;
+	border-radius: 60px;
+	margin: 0 16px 0 0;
+	color: #3360f4;
+	list-style: none;
+	font-family: Montserrat-Medium, sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	text-align: center;
+	padding: 8px 12px;
+	//margin: 0;
+	transition: 0.3s all;
+
+	&:hover {
+		cursor: pointer;
+		opacity: 0.7;
+	}
+
+	&__content {
+		height: 100%;
+		animation-name: animationTabitem;
+		animation-delay: 0.7s;
+		animation-fill-mode: both;
+		animation-direction: reverse;
+	}
+}
+
+.active-tab {
+	transition: 0.5s all;
+	background: #3360f4 !important;
+	color: #ffffff !important;
+}
+
+.second-level-tab {
+	background-color: transparent;
+	color: #5B6477 !important;
+
+	&:last-of-type {
+		margin-right: 0;
+	}
+}
+
+.active-tab-second {
+	display: block;
+	position: relative;
+	transition: 0.5s all;
+	background: transparent !important;
+	color: #3360F4 !important;
+	font-family: Montserrat-SemiBold, sans-serif;
+	z-index: 9999;
+
+	&::after {
+		background-color: #3360F4;
+		display: block;
+		position: relative;
+		top: 6.5px;
+		content: "";
+		height: 2px;
+		width: 0;
+		animation: animBorderActive .3s ease-in-out;
+		animation-fill-mode: both;
+		bottom: 0;
+		left: 0;
+		opacity: 1;
+		z-index: 9999;
+	}
+}
+
+
+@keyframes animationTabItem {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+
+}
+
+@keyframes animBorderActive {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
+
+}

@@ -1,0 +1,104 @@
+@import '../../styles/variables.scss';
+
+:global {
+  html body {
+    .ant-select-item-option-disabled {
+      color: gray !important;
+    }
+    .ant-select-selection-placeholder, .ant-select-selection-item {
+      display: flex;
+      align-items: center;
+    }
+    .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+      font-weight: 400;
+    }
+    .ant-select-multiple {
+      &.ant-select-open:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) {
+          .ant-select-arrow {
+            transform: rotate(180deg);
+          }
+      }
+    }
+    .ant-select {
+      color: $white;
+
+      &-clear {
+        display: flex;
+        background: transparent;
+        color: $primary;
+      }
+
+      &:not(.ant-select-customize-input) .ant-select-selector {
+        background-color: transparent;
+        border-color: $white-opacity1;
+        border-radius: 4px;
+      }
+      &:not(.ant-select-disabled):hover .ant-select-selector {
+        border-color: $primary !important;
+        box-shadow: none;
+      }
+      &.ant-select-open:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) {
+        .ant-select-selector {
+          border: 1px solid $primary;
+          box-shadow: none;
+        }
+        .ant-select-arrow {
+          color: $white;
+          svg path {
+            fill: $primary;
+          }
+        }
+        &:not(.ant-select-show-search) {
+          .ant-select-arrow {
+            transform: rotate(180deg);
+          }
+        }
+      }
+      &.ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input, .ant-select-open) {
+        .ant-select-selector {
+          border: 1px solid $white-opacity1;
+          box-shadow: none;
+        }
+        .ant-select-arrow {
+          color: $white;
+          svg path {
+            fill: $white;
+          }
+        }
+        &:not(.ant-select-show-search) {
+          .ant-select-arrow {
+            transform: rotate(360deg);
+          }
+        }
+      }
+      .ant-select-arrow {
+        color: $white;
+        font-size: 24px !important;
+      }
+
+      &.ant-select-disabled:not(.ant-select-customize-input) {
+        .ant-select-selector {
+          background-color: $white-opacity3;
+          border-color: transparent;
+          color: $white-opacity1;
+          .ant-select-selection-placeholder {
+            color: $white-opacity2;
+          }
+        }
+        .ant-select-arrow {
+          color: $white-opacity1;
+        }
+      }
+      &.ant-select-status-error.ant-select:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer)
+        .ant-select-selector,
+      &.ant-select-status-error:not(.ant-select-disabled):not(.ant-select-customize-input) .ant-select-selector {
+        background-color: transparent;
+        border-color: $error;
+        box-shadow: none;
+      }
+      &.ant-select-focused:not(.ant-select-customize-input) .ant-select-selector {
+        box-shadow: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import '../../styles/variables.scss';
+
+.switch {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  span {
+    font-size: 16px;
+    color: $text;
+  }
+  :global {
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+    .ant-switch {
+      background: $white-opacity1;
+      .ant-switch-handle::before {
+        background: $text-opacity3 !important;
+      }
+      &-checked {
+        background: $primary !important;
+        .ant-switch-handle::before {
+          background: $white !important;
+        }
+      }
+    }
+  }
+}

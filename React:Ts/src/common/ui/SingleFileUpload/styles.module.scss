@@ -1,0 +1,145 @@
+@import '/src/common/styles/variables.scss';
+
+.container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  .btn.btn {
+    height: 40px;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 300;
+    line-height: 140%;
+    color: $text !important;
+    border-color: rgba($white, 0.14);
+    &:hover {
+      background-color: $primary !important;
+    }
+  }
+  .logoUpload {
+    width: 100%;
+    :global {
+      .ant-upload {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+      }
+    }
+
+    .sizeError {
+      border: 1px solid $error !important;
+    }
+
+    .inputBlock {
+      width: 100%;
+      height: 40px;
+      display: flex;
+      border: 1px solid $modal-border-bottom;
+
+      :global {
+        .ant-input {
+          background: transparent;
+          border: none;
+          &:disabled{
+            background: $editor-disabled;
+            border: none;
+          }
+        }
+      }
+      .logoInput {
+        height: auto;
+        color: $white;
+      }
+
+      .searchIcon {
+        font-size: 20px;
+        svg path {
+          fill: none;
+          stroke: $primary;
+        }
+      }
+
+      .btnReview {
+        height: auto;
+        padding: 12px 16px;
+        color: $primary;
+        border: none;
+        background-color: transparent;
+        text-transform: inherit;
+        font-size: 14px;
+        &:hover {
+          color: $primary-hover;
+        }
+      }
+      .btnReviewDisabled {
+        background-color: $editor-disabled !important;
+      }
+    }
+    .inputBlockBorder {
+      width: 100%;
+      height: 40px;
+      display: flex;
+      .logoInput {
+        height: auto;
+        border: none;
+        color: $white;
+      }
+    }
+    .uploadBtn {
+      height: 39px;
+      border-color: $primary;
+      text-transform: inherit;
+      font-size: 16px;
+      span {
+        color: $primary;
+          &:hover {
+            color: $primary-hover;
+          }
+      }
+      &:hover {
+        border-color: $primary-hover!important;
+        background: transparent !important;
+      }
+      &:disabled {
+        opacity: 1;
+        border-color: $gray-light;
+        span {
+          color: $gray-light;
+        }
+      }
+    }
+  }
+
+  .btn.btnDelete {
+    font-size: 20px;
+    span svg path {
+      fill: $white;
+    }
+    &:hover {
+      border-color: $primary3!important;
+    }
+  }
+  .btnMake {
+    width: 40px;
+    display: flex;
+    justify-content: center;
+
+    &:hover {
+      border-color: $primary3!important;
+    }
+  }
+  .btn[disabled] {
+    border-color: $progress-bar-default;
+
+    span svg path {
+      fill: #B8B7BB;
+    }
+
+    &:hover {
+      border-color: $progress-bar-default!important;
+      background-color: transparent!important;
+    }
+  }
+}

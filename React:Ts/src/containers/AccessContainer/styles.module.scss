@@ -1,0 +1,23 @@
+.emptyContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 320px) !important;
+  .customEmpty {
+    :global {
+      .ant-empty-image {
+        margin-bottom: 48px;
+        height: auto;
+        img {
+          width: 366px;
+          height: 272px;
+        }
+      }
+      .ant-empty-description {
+        font-size: 22px;
+        font-weight: 300;
+        line-height: 135%;
+      }
+    }
+  }
+}

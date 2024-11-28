@@ -1,0 +1,1 @@
+../../../../../node_modules/vision-camera-code-scanner/ios/VisionCameraCodeScanner-Bridging-Header.h

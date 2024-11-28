@@ -1,0 +1,80 @@
+@import '../../styles/variables.scss';
+
+.inputWrapper {
+  :global {
+    .ant-input-number-disabled {
+      background: $result-modal-bg !important;
+
+      input {
+        color: $text-description !important;
+      }
+    }
+
+    .ant-input-number-status-error:not(.ant-input-number-disabled):not(.ant-input-number-borderless).ant-input-number {
+      background: transparent !important;
+    }
+  }
+
+  .input {
+    width: 100%;
+    background-color: transparent;
+    color: $text;
+    border: 1px solid $white-opacity1;
+    border-radius: 0;
+    font-family: $main-font;
+    font-size: 16px;
+    padding: 12px 16px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+
+    :global {
+      .ant-input-number-handler-wrap {
+        opacity: 1;
+        background: none;
+        right: 16px;
+        top: 6px;
+      }
+
+      .anticon {
+        font-size: 12px;
+      }
+
+      .ant-input-number-handler {
+        overflow: unset;
+        height: 38% !important;
+      }
+
+      .ant-input-number-input {
+        padding: 0;
+        height: min-content;
+        border: none !important;
+      }
+
+      .ant-input-number-handler:active {
+        background: $text-opacity1;
+      }
+
+      .ant-input-number-handler-down:hover,
+      .ant-input-number-handler-up:hover,
+      .ant-input-number-handler:hover .ant-input-number-handler-up-inner,
+      .ant-input-number-handler:hover .ant-input-number-handler-down-inner,
+      .ant-input-number-handler-wrap:hover .ant-input-number-handler,
+      .ant-input-number-handler-up-inner,
+      .ant-input-number-handler-down-inner {
+        color: $text;
+      }
+
+      .ant-input-number:hover:not(.ant-input-number-borderless) .ant-input-number-handler-down,
+      .ant-input-number-focused:not(.ant-input-number-borderless) .ant-input-number-handler-down,
+      .ant-input-number-handler {
+        border: none !important;
+      }
+    }
+  }
+
+  .input:hover {
+    border: 1px solid $white;
+  }
+}
+

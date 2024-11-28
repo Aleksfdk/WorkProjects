@@ -1,0 +1,37 @@
+pool:
+  name: Default
+  demands: docker
+
+trigger:
+  branches:
+    include:
+      - dev
+
+steps:
+
+- task: Docker@0
+  displayName: 'Build an image front'
+  inputs:
+    containerregistrytype: 'Container Registry'
+    dockerRegistryConnection: test.test.ru
+    dockerFile: Dockerfile
+    imageName: 'test.ru/test'
+    includeLatestTag: true
+
+
+- script: 'test.yaml'
+  displayName: 'Command Line Script'
+
+- task: Docker@0
+  displayName: 'Push an image front'
+  inputs:
+    containerregistrytype: 'Container Registry'
+    dockerRegistryConnection: test.test.ru
+    action: 'Push an image'
+    imageName: 'test.test.ru/test'
+    includeLatestTag: true
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathToPublish: '$(Build.ArtifactStagingDirectory)'
+    artifactName: deploy-artifact

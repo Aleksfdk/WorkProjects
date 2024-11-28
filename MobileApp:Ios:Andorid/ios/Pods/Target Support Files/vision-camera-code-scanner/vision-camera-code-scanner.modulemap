@@ -1,0 +1,6 @@
+module vision_camera_code_scanner {
+  umbrella header "vision-camera-code-scanner-umbrella.h"
+
+  export *
+  module * { export * }
+}

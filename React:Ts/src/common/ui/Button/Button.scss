@@ -1,0 +1,61 @@
+@import '../../styles/variables.scss';
+
+.ant-btn.ant-btn {
+  font-family: $main-font;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  // <Button type="default"></Button>
+  &.ant-btn-default {
+    background: transparent;
+    color: $white;
+    font-weight: 500;
+    border: 1px solid $white;
+    font-size: 18px;
+    &:not(.ant-btn-circle) {
+      border-radius: 0;
+    }
+
+    .ant-btn-loading-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $white;
+      background-color: transparent;
+    }
+  }
+
+  // <Button type="primary"></Button>
+  &.ant-btn-primary {
+    border-color: transparent;
+    background: $primary;
+    color: $white;
+
+    &:not(.ant-btn-circle) {
+      border-radius: 0;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: rgba($primary, 0.75);
+    }
+  }
+
+  // Align btn icon correctly (it won't be needed when we get glyph icons)
+  &--flex {
+    display: flex;
+    align-items: center;
+    row-gap: 24px;
+
+    > span:first-child,
+    > img:first-child {
+      margin-right: 8px;
+    }
+  }
+}

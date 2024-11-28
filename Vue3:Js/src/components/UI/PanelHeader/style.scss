@@ -1,0 +1,61 @@
+.panel-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&__breadCrumbs {
+		display: flex;
+		align-items: center;
+
+		& p {
+			font-size: 14px;
+			font-weight: 400;
+			color: #50596f;
+			padding: 0 8px;
+			margin: 0;
+			transition: 0.5s all;
+			&:hover {
+				color: #a0a3b6;
+				cursor: pointer;
+			}
+		}
+	}
+	&__breadCrumbs-item {
+		display: flex;
+		align-items: center;
+	}
+	.arrow-breadCrumbs {
+		transform: rotate(180deg) !important;
+		width: 12px !important;
+	}
+	&__events {
+		display: flex;
+		align-items: center;
+
+		.notification-icon {
+			width: 32px !important;
+			height: 32px !important;
+			padding: 0 12px;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+
+		.profile-avatar {
+			width: 36px;
+			height: 36px;
+			border-radius: 36px;
+
+			& img {
+				width: 36px;
+				height: 36px;
+				border-radius: 36px;
+
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}

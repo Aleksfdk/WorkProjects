@@ -1,0 +1,107 @@
+@import '../../styles/variables.scss';
+
+.filtersDefault {
+  width: 100%;
+
+  .filtersGroupButtonDefault {
+    display: flex;
+    gap: 16px;
+
+    .filterButtonDefault {
+      font-family: $main-font;
+      font-size: 18px;
+      display: inline-flex;
+      align-items: center;
+      background: transparent;
+      color: $white;
+      font-weight: 400;
+      border-radius: 0;
+      padding: 4px 16px;
+    }
+
+    :global {
+      .ant-radio-button-wrapper {
+        border: 1px solid $modal-border-bottom;
+        height: 44px;
+
+        &-checked:not(.ant-radio-button-wrapper-disabled):hover::before,
+        &:not(:first-child)::before {
+          border: none;
+          background-color: transparent;
+        }
+
+        &-checked:not(.ant-radio-button-wrapper-disabled) {
+          background-color: transparent;
+
+          &.ant-radio-button-wrapper,
+          &.ant-radio-button-wrapper:first-child {
+            border-color: transparent;
+            background: $primary;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.filters {
+  width: 100%;
+
+  .filtersGroupButton {
+    display: flex;
+    gap: 15px;
+    border-bottom: 1px solid $modal-border-bottom;
+  }
+
+  .filterButton {
+    border: none;
+    color: $white;
+    transition: 0.15s ease-in-out;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 24px;
+    height: inherit;
+    font-family: $main-font;
+
+    &:hover {
+      color: $text;
+    }
+  }
+
+  :global {
+    .ant-radio-button-wrapper {
+      padding: 0px 16px;
+      background: transparent;
+      padding-bottom: 10px;
+      margin-bottom: -1.5px;
+
+      &:first-child,
+      &:last-child {
+        border: none;
+      }
+
+      &-checked:not(.ant-radio-button-wrapper-disabled):hover::before,
+      &:not(:first-child)::before {
+        border: none;
+        background-color: transparent;
+      }
+
+      &-checked:not([class*=' ant-radio-button-wrapper-disabled']) {
+        background: transparent;
+
+        &.ant-radio-button-wrapper,
+        &.ant-radio-button-wrapper:first-child {
+          color: $primary !important;
+          border-bottom: 1px solid $primary;
+        }
+      }
+
+      &-checked:not(.ant-radio-button-wrapper-disabled),
+      &-checked:not(.ant-radio-button-wrapper-disabled):focus-within {
+        box-shadow: none;
+        color: $primary;
+      }
+    }
+  }
+}

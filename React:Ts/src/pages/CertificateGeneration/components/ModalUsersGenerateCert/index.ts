@@ -1,0 +1,1 @@
+export { ModalUsersGenerateCert } from './ModalUsersGenerateCert';

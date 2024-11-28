@@ -1,0 +1,135 @@
+@import 'common/styles/variables';
+
+div.ant-table {
+  background: transparent;
+
+  table {
+    border-spacing: 0 10px;
+  }
+}
+
+@mixin table-cell {
+  padding-left: 20px !important;
+  font-weight: 500;
+  font-size: 14px;
+  color: $text;
+
+  &:not(:last-child) {
+    border-right: none;
+  }
+  &::before {
+    display: none;
+  }
+}
+
+div.ant-table {
+  thead.ant-table-thead {
+    position: relative;
+    bottom: 4px;
+
+    .ant-table-column-title > div > span {
+      font-size: 20px;
+      svg path {
+        stroke: $white;
+        stroke-opacity: 1;
+      }
+    }
+
+    th[aria-sort='ascending'] svg path:nth-child(1) {
+      stroke: $primary;
+    }
+
+    th[aria-sort='descending'] svg path:nth-child(2) {
+      stroke: $primary;
+    }
+
+    .ant-table-cell {
+      @include table-cell;
+      padding-block: 9.5px;
+      background-color: $card-bg-new;
+      border: none;
+      font-size: 16px;
+
+      .ant-table-column-sorter {
+        display: none;
+      }
+    }
+  }
+
+  tbody.ant-table-tbody {
+    .ant-table-placeholder {
+      :hover {
+        background: transparent !important;
+      }
+    }
+
+    .ant-table-cell {
+      @include table-cell;
+      background: transparent;
+      vertical-align: center;
+      border-top: 1px solid $background-opacity1;
+      border-bottom: 1px solid $background-opacity1;
+      font-size: 16px;
+      padding: 6px 20px !important;
+
+      &:last-child {
+        border-right: 1px solid $background-opacity1;
+      }
+
+      &:first-child {
+        border-left: 1px solid $background-opacity1;
+      }
+
+      &-row-hover {
+        background: transparent !important;
+      }
+    }
+    .ant-table-row {
+      height: 50px !important;
+    }
+  }
+}
+
+$table-prefix-cls: 'ant-table';
+
+@mixin table-size($size, $padding-vertical, $padding-horizontal, $font-size) {
+  div.#{$table-prefix-cls}.#{$table-prefix-cls}-#{$size} {
+    // Font-size is a legacy from initial AntDesign rules. Can be removed if it is redundant
+    font-size: $font-size;
+
+    .#{$table-prefix-cls}-title,
+    .#{$table-prefix-cls}-footer,
+    .#{$table-prefix-cls}-thead > tr > th,
+    .#{$table-prefix-cls}-tbody > tr > td,
+    tfoot > tr > th,
+    tfoot > tr > td {
+      padding: $padding-vertical $padding-horizontal;
+    }
+
+    .#{$table-prefix-cls}-filter-trigger {
+      margin-right: calc($padding-horizontal / 2);
+    }
+
+    .#{$table-prefix-cls}-expanded-row-fixed {
+      margin: (-$padding-vertical) (-$padding-horizontal);
+    }
+
+    .#{$table-prefix-cls}-tbody {
+      // ========================= Nest Table ===========================
+      .#{$table-prefix-cls}-wrapper:only-child {
+        .#{$table-prefix-cls} {
+          margin: (-$padding-vertical) (-$padding-horizontal) (-$padding-vertical);
+        }
+      }
+    }
+
+    // https://github.com/ant-design/ant-design/issues/35167
+    .#{$table-prefix-cls}-selection-column {
+      padding-inline-start: calc($padding-horizontal / 4);
+    }
+  }
+}
+
+@include table-size(small, 8px, 8px, 14px);
+
+@include table-size(middle, 10px, 20px, 14px);

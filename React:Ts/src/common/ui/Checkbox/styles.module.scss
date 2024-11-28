@@ -1,0 +1,52 @@
+@import '../../styles/variables.scss';
+
+.appCheckbox.appCheckbox {
+  border-spacing: 0;
+  &[disabled] {
+    background-color: $white-opacity3;
+    border-color: transparent;
+  }
+
+  :global {
+    //.ant-checkbox-disabled {
+    //  background-color: $btn-disabled-new;
+    //  border-color: $btn-disabled-new;
+    //  .ant-checkbox-inner {
+    //    &::after {
+    //      border-bottom: 2px solid $black;
+    //      border-right: 2px solid $black;
+    //    }
+    //  }
+    //}
+    .ant-checkbox-disabled + span {
+      color: $white;
+    }
+    .ant-checkbox-checked {
+      background-color: $primary-btn-bg;
+      border-color: $primary-btn-bg;
+    }
+    .ant-checkbox {
+      .ant-checkbox-inner {
+        border-radius: 0;
+        background-color: transparent;
+        border-color: $primary-btn-bg;
+
+        &::after {
+          border-bottom: 2px solid $white;
+          border-right: 2px solid $white;
+        }
+      }
+    }
+  }
+}
+
+:global {
+
+  html {
+    .ant-input {
+      &-disabled {
+        box-shadow: 10px 10px 10px $primary;
+      }
+    }
+  }
+}
